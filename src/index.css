@@ -33,16 +33,21 @@ body {
   display: grid;
   place-items: center;
   justify-content: center;
-  max-height: 100vh;
+  height: 100vh;
   transition: var(--transition);
+  background-image: url(./assets/abstract-textured-backgound_1258-30535.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 main {
-  max-width: 700px;
+  max-width: 1020px;
   padding: 20px;
   display: grid;
   grid-template-areas:
     " . nav ."
+    " header header header"
     ". section ."
     ".  footer  .";
 }
@@ -62,6 +67,7 @@ nav {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0) scale(1.2);
+  z-index: 12;
 }
 .nav-center {
   display: flex;
@@ -147,7 +153,95 @@ nav .btn:hover {
   }
 }
 /* End Nav Style */
+/*  Start Header Style */
+header {
+  grid-area: header;
+  text-align: center;
+  padding: 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
+.person-info {
+  transition: font-size 0.2s ease-in;
+  text-align: left;
+  color: var(--dark-color);
+  font-size: 1.2em;
+}
+.person-info h1 {
+  text-transform: capitalize;
+  text-shadow: 0 4px 10px #000000d1;
+}
+.person-info span {
+  color: var(--main-bg-color);
+}
+.person-info p {
+  margin: 10px 0;
+  line-height: 2em;
+}
 
+.img-contain {
+  transition: transform 0.2s ease-in-out;
+  
+}
+.img-contain img {
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 5px solid var(--main-bg-color);
+  margin-left: 20px;
+}
+header h1 {
+  text-transform: capitalize;
+}
+@media screen and (max-width: 900px) {
+  header{
+    padding: 20px;
+  }
+  .person-info {
+    font-size: 16px;
+    /* width: 22em; */
+    /* line-height: 1em; */
+  }
+  .img-contain img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 3em;
+    padding: 20px;
+  }
+  .person-info {
+    /* text-align: center; */
+    width: 100%;
+    font-size: 1em;
+  }
+.img-contain{
+  transform: translate(60px,-90px);
+}
+  .img-contain img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 400px) {
+  header{
+    gap:0;
+  }
+  .img-contain img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/*  End Header Style */
 .section {
   grid-area: section;
 }

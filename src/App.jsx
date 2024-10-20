@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
-import Nav from "./Nav.jsx";
+import Nav from "./components/Nav";
+import Header from "./components/Header";
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 const url = "https://course-api.com/react-tabs-project";
 function App() {
   let [dark, setDark] = useState(false);
 
-  function enableDark(){
+  function enableDark() {
     setDark(!dark);
   }
   useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
   return (
     <main>
       <Nav dark={dark} enableDark={enableDark} />
-
+      <Header />
       <section className="section">
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem debitis
