@@ -7,19 +7,17 @@ export default function Header() {
         <h1>
           Hi, I&apos;m <span>Islam Foda</span>
         </h1>
-        <p>Frontend Developer</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          labore sit ut debitis quos deserunt distinctio sint hic provident
-          minima! Officia qui eligendi dicta velit est eius asperiores minus
-          quis.
+        <p className="job-title">Frontend Developer</p>
+        <p className="description">
+          Passionate and ambitious <span>Frontend Developer</span> with a keen
+          interest in learning new technologies. Currently diving into ReactJS,
+          I began my tech journey in 2014 as a Network Engineer. Now, I am
+          actively seeking opportunities to leverage my skills and grow as a{" "}
+          <span>frontend developer</span>.
         </p>
       </div>
       <div className="img-contain">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-          alt=""
-        />
+        <img src="./src/assets/Islamf.jpg" alt="" />
       </div>
     </header>
   );
