@@ -4,14 +4,19 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
 // ATTENTION!!!!!!!!!!
+import "./Data.js";
+import { projects } from "./Data.js";
+
 // I SWITCHED TO PERMANENT DOMAIN
-const url = "https://course-api.com/react-tabs-project";
 function App() {
+  const myProjects = projects.map((project) => {
+    return project;
+  });
   return (
     <main>
       <Nav />
       <Header />
-      <Projects />
+      <Projects projects={myProjects} />
     </main>
   );
 }
