@@ -26,16 +26,14 @@ export default function Nav() {
         setIsMenuVisible(false);
       }
     };
-    // window.addEventListener("scroll", () => {
-    //   if (window.scrollY >= 810) {
-    //     console.log(window.scrollY);
-    //     window.nav.style.opacity = "0";
-    //     window.nav.style.display = "none";
-    //   } else {
-    //     window.nav.style.opacity = "1";
-    //     window.nav.style.display = "flex";
-    //   }
-    // });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 650) {
+        console.log(window.scrollY);
+        window.nav.classList.add("hide-nav");
+      } else {
+        window.nav.classList.remove("hide-nav");
+      }
+    });
     // window.addEventListener("mousedown", handleKeyPress);
     // window.addEventListener("touchstart", (event) => {
     //   const smMenu = document.getElementById("sm-menu");
@@ -98,7 +96,7 @@ export default function Nav() {
 
         <div id="pageWrapper"></div>
       </div>
-      <ul id="home" className={"nav-center"} key={1}>
+      <ul className={"nav-center"} key={1}>
         <li>
           <a href="#home">home</a>
           <span></span>

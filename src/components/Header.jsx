@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Header() {
   return (
-    <header>
+    <header id="home">
       <div className="person-info">
         <h1>
           Hi, I&apos;m <span>Islam Foda</span>
