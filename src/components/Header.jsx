@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaChevronUp } from "react-icons/fa";
 export default function Header() {
   return (
     <header id="home">
@@ -22,6 +22,14 @@ export default function Header() {
           alt=""
         />
       </div>
+      <span className="up">
+        <a href="#home">
+          {" "}
+          <i id="top">
+            <FaChevronUp />
+          </i>
+        </a>
+      </span>
     </header>
   );
 }

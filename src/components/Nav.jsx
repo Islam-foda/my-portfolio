@@ -9,6 +9,8 @@ export default function Nav() {
   useEffect(() => {
     const smMenu = document.getElementById("burgerMenu");
     const pageWrapper = document.getElementById("pageWrapper");
+    let upbtn = document.getElementById("top");
+
     smMenu.addEventListener("click", () => {
       pageWrapper.className = "blur";
     });
@@ -28,10 +30,11 @@ export default function Nav() {
     };
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 650) {
-        console.log(window.scrollY);
         window.nav.classList.add("hide-nav");
+        upbtn.style.right = "2rem";
       } else {
         window.nav.classList.remove("hide-nav");
+        upbtn.style.right = "-4rem";
       }
     });
     // window.addEventListener("mousedown", handleKeyPress);
