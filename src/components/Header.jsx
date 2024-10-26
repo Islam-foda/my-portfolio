@@ -17,7 +17,7 @@ export default function Header() {
         </p>
       </div>
       <div className="img-contain">
-        <img src="./src/assets/Islamf.jpg" alt="" />
+        <img src="https://github.com/Islam-foda/my-portfolio/blob/main/src/assets/Islamf.jpg" alt="" />
       </div>
     </header>
   );
