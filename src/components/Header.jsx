@@ -17,10 +17,7 @@ export default function Header() {
         </p>
       </div>
       <div className="img-contain">
-        <img
-          src="https://github.com/Islam-foda/my-portfolio/blob/main/src/assets/Islamf.jpg?raw=true"
-          alt=""
-        />
+        <img src="../src/assets/Islamf.jpg" alt="" />
       </div>
       <span className="up">
         <a href="#home">
