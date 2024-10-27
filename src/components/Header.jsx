@@ -17,7 +17,10 @@ export default function Header() {
         </p>
       </div>
       <div className="img-contain">
-        <img src="../src/assets/Islamf.jpg" alt="" />
+        <img
+          src="https://res.cloudinary.com/dmh8izmhg/image/upload/v1730014035/prndrqcnq46hbxunvpzc.jpg"
+          alt=""
+        />
       </div>
       <span className="up">
         <a href="#home">

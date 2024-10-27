@@ -228,7 +228,7 @@ nav .btn:hover {
   text-transform: capitalize;
   cursor: pointer;
   filter: opacity(0.5);
-  transition: 1.2s;
+  transition: 0.2s;
 }
 
 .up i:hover {
@@ -303,7 +303,6 @@ header {
 @media screen and (max-height: 450px) and (max-width: 900px) {
   header {
     height: 130vh;
-    
   }
   .person-info {
     font-size: 14px;
@@ -339,11 +338,11 @@ header h1 {
   }
   .person-info {
     width: 100%;
-    font-size: 1em;
+    font-size: .85em;
   }
 
   .img-contain {
-    transform: translate(3em, -1em);
+    transform: translate(3em, 0em);
   }
   .img-contain img {
     width: 200px;
@@ -414,7 +413,7 @@ header h1 {
   position: relative;
   border-radius: 0.5em;
   cursor: pointer;
-  /* transition: all 1.2s ease-in-out; */
+  overflow: hidden;
 }
 .project-image img {
   border-radius: 0.6em;
@@ -455,7 +454,7 @@ header h1 {
 .project-image:hover .project-btn {
   opacity: 1;
   cursor: pointer;
-  bottom: 35%;
+  bottom: 29%;
 }
 .project-btn:hover {
   color: var(--dark-color);
@@ -466,7 +465,8 @@ header h1 {
 .project-info h3:hover {
   color: var(--dark-color);
 }
-.project-info p,h3 {
+.project-info p,
+h3 {
   margin: 10px auto;
   padding: 10px;
 }
