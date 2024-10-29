@@ -1,8 +1,10 @@
 :root {
-  --main-bg-color: #ee6c4d;
-  --main-color: #ffffff;
-  --dark-bg-color: #293241;
-  --dark-color: #98c1d9;
+  --main-bg-color: #252422; /* #ee6c4d; */
+  --main-color: #fffcf2;
+  --secondary-color: #ccc5b9;
+  --dark-bg-color: #f17544;
+  --dark-color: #403d39;
+  --dark-transparent: rgba(0, 0, 0, 0.5);
   --transition: all 0.3s;
   --transition-opacity: filter 0.5s ease-in;
 }
@@ -37,7 +39,6 @@ body {
   justify-content: center;
   height: 100vh;
   transition: var(--transition);
-  /* background-image: url(./assets/abstract-textured-backgound_1258-30535.avif); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -87,7 +88,6 @@ nav {
 
 .miniNav {
   display: none;
-  /* position: relative; */
 }
 
 .ul-toggle {
@@ -105,10 +105,10 @@ nav {
 .ul-toggle .close {
   cursor: pointer;
   position: absolute;
-  /* top: 0.5em; */
   right: -10em;
 }
 .ul-toggle li {
+  font-weight: bold;
   border-bottom-width: 1px;
   padding: 0.5em 2em;
   display: block;
@@ -124,13 +124,14 @@ nav {
 .ul-toggle span {
   display: block;
   border-bottom: 2px solid var(--main-bg-color);
-  transform: scaleX(0);
+  width: 0;
   transition: var(--transition);
   position: relative;
   bottom: -5px;
 }
 
 .nav-center li {
+  font-weight: bold;
   list-style: none;
   padding: 3px 5px;
   cursor: pointer;
@@ -138,11 +139,11 @@ nav {
   transition: var(--transition);
 }
 .nav-center li:hover {
-  color: var(--dark-color);
+  color: var(--secondary-color);
 }
 .ul-toggle li:hover,
 .nav-center li:hover {
-  color: var(--dark-color);
+  color: var(--main-color);
 }
 
 .blur {
@@ -159,8 +160,8 @@ nav {
 
 .nav-center li:hover span,
 .ul-toggle li:hover span {
-  border-bottom: 2px solid var(--dark-color);
-  transform: scale(100%);
+  border-bottom: 2px solid var(--main-color);
+  width: 100%;
 }
 
 nav .btn-contain {
@@ -168,7 +169,7 @@ nav .btn-contain {
   gap: 1em;
 }
 nav .btn {
-  padding: 7px;
+  padding: 6px;
   background-color: var(--main-bg-color);
   color: var(--main-color);
   border-radius: 5px;
@@ -238,9 +239,10 @@ header {
   grid-area: header;
   text-align: center;
   padding: 50px;
-  background-image: url(./assets/abstract-textured-backgound_1258-30535.avif);
+  background-image: url(https://img.freepik.com/free-vector/cyber-technology-background_23-2148390330.jpg?t=st=1730202948~exp=1730206548~hmac=d258d5c3cc9d358755cbe87097c83a1acb4fdf8558d4f56e5782906fc09c40a7&w=1380);
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
+  color: var(--main-color);
   height: 100vh;
   max-width: 100vw;
   display: flex;
@@ -248,14 +250,37 @@ header {
   align-items: center;
   gap: 2em;
   user-select: none;
-}
+} 
+
+
+
+
 
 .person-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  width: 50%;
   transition: font-size 0.2s ease-in;
   text-align: left;
-  /* color: var(--dark-color); */
   font-size: 1.2em;
+  position: relative;
+  z-index: 2;
 }
+.person-info::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -80px;
+  width: 120%;
+  height: 118%;
+  background-color: var(--dark-transparent);
+  border-radius: 12px;
+  filter: blur(4px);
+}
+
 .person-info h1 {
   text-transform: capitalize;
   text-shadow: 0 4px 10px #000000d1;
@@ -269,9 +294,10 @@ header {
 .person-info .job-title {
   text-transform: capitalize;
   letter-spacing: 0.2em;
-  color: var(--dark-bg-color);
+  color: var(--main-color);
   font-weight: 700;
-  font-style: italic;
+  font-size: 1.2em;
+  /* font-style: italic; */
 }
 .description::first-letter {
   text-transform: capitalize;
@@ -322,7 +348,13 @@ header h1 {
     padding: 20px;
   }
   .person-info {
-    font-size: 14px;
+    font-size: 16px;
+    width: 100%;
+  }
+  .person-info::before {
+    /* width: 100%; */
+    /* left: 0px; */
+    /* padding: 0 10px; */
   }
   .img-contain img {
     width: 150px;
@@ -337,16 +369,21 @@ header h1 {
     padding: 20px;
   }
   .person-info {
-    width: 100%;
-    font-size: .85em;
+    /* width: 100%; */
+    font-size: 0.85em;
+  }
+  .person-info::before {
+    /* width: 100%; */
+    /* left: 0px; */
+    /* padding: 0 10px; */
   }
 
   .img-contain {
-    transform: translate(3em, 0em);
+    transform: translate(3em, -3em);
   }
   .img-contain img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -355,6 +392,11 @@ header h1 {
   }
   header h1 span {
     display: block;
+  }
+  .person-info::before {
+    /* width: 100%; */
+    /* left: 0px; */
+    padding: 0 10px;
   }
   .img-contain img {
     width: 100px;
