@@ -15,9 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      {/* <main className="main">
-        <Main />
-      </main> */}
+      <Main />
       <Projects projects={myProjects} />
     </>
   );
