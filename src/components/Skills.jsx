@@ -10,7 +10,7 @@ import { DiMongodb } from "react-icons/di";
 export default function Skills() {
   return (
     <article className="skills">
-      <h1 className="sec-title">My Skills</h1>
+      <h1 className="sec-title">Skills</h1>
       <div className="skills-container">
         <span>
           {" "}

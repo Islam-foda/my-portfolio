@@ -12,9 +12,13 @@ export default function Header() {
   const [displayedText, setDisplayedText] = useState("");
   const [arrayIndex, setArrayIndex] = useState(0);
   const [index, setIndex] = useState(0);
-  const text = ["Frontend developer", "Network Engineer"];
 
   useEffect(() => {
+    const text = [
+      "Frontend developer",
+      "Responsive Web Design",
+      "Landing page",
+    ];
     if (index < text[arrayIndex].length) {
       const timeout = setTimeout(() => {
         setDisplayedText(displayedText + text[arrayIndex].charAt(index));
@@ -29,7 +33,7 @@ export default function Header() {
       }, 2000); // Pause before restarting
       return () => clearTimeout(resetTimeout);
     }
-  }, [index, text, displayedText, arrayIndex]);
+  }, [index, displayedText, arrayIndex]);
 
   return (
     <header className="header">

@@ -13,11 +13,12 @@ export default function Main() {
             <FaQuoteRight />
           </span>
           <p>
-            Hi, I&apos;m Islam Foda, a passionate frontend developer with a keen
-            interest in learning new technologies. I started my tech journey in
-            2014 as a Network Engineer and transitioned to frontend development,
-            currently diving deep into ReactJS. I love creating intuitive and
-            dynamic user interfaces.
+            Hi, I&apos;m Islam Foda, a Network Engineer and passionate frontend
+            developer with a keen interest in learning new technologies. I
+            started my tech journey in 2014 as a Network Engineer, at 2022 i
+            Started on my first Steps at frontend development, currently diving
+            deep into ReactJS. I love creating intuitive and dynamic user
+            interfaces.
           </p>
         </div>
       </article>
