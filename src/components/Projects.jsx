@@ -1,9 +1,12 @@
 import React from "react";
 import { FaLink } from "react-icons/fa";
 
-export default function Projects({ projects }) {
+export default function Projects({ projects, isDark }) {
   const myProjects = projects.map((project) => (
-    <article key={project.id} className="project-card">
+    <article
+      key={project.id}
+      className={isDark ? "project-card" : "card-dark project-card"}
+    >
       <div className="project-image">
         <img src={project.img} alt={project.title} />
         <span className="dim-screen"></span>
@@ -13,7 +16,7 @@ export default function Projects({ projects }) {
           </a>
         </h2>
       </div>
-      <div className="project-info">
+      <div className={isDark ? "project-info" : "info-dark project-info"}>
         <h3>
           <a href={project.githubLink} target="_blank">
             <FaLink /> {project.title} (Github-link)
@@ -25,7 +28,7 @@ export default function Projects({ projects }) {
   ));
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className={isDark ? "section" : "section sec-dark"}>
       <h1 className="section-title">Projects</h1>
       <div className="projects">{myProjects}</div>
     </section>

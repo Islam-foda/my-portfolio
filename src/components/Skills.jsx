@@ -7,11 +7,13 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
-export default function Skills() {
+export default function Skills({ isDark }) {
   return (
-    <article className="skills">
-      <h1 className="sec-title">Skills</h1>
-      <div className="skills-container">
+    <article className={isDark ? "skills" : "main-dark skills"}>
+      <h1 className={isDark ? "sec-title" : "skills-dark sec-title"}>Skills</h1>
+      <div
+        className={isDark ? "skills-container" : "skills-dark skills-container"}
+      >
         <span>
           {" "}
           <FaHtml5 />

@@ -1,9 +1,12 @@
 import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-export default function Main() {
+export default function Main({ isDark }) {
   return (
-    <main className="main" id="home">
-      <article className="about-me" id="about">
+    <main className={isDark ? "main" : "main-dark main"} id="home">
+      <article
+        className={isDark ? "about-me" : "about-dark about-me"}
+        id="about"
+      >
         <h1>About Me</h1>
         <div className="about-container">
           <span className="left">

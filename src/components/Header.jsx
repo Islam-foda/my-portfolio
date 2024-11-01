@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import {
   FaGithub,
   FaLinkedin,
@@ -7,12 +7,13 @@ import {
   FaLaptopCode,
 } from "react-icons/fa";
 
-export default function Header() {
+export default function Header({ isDark, toggleDark }) {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
   const [arrayIndex, setArrayIndex] = useState(0);
   const [index, setIndex] = useState(0);
 
+  //animate job title effect
   useEffect(() => {
     const text = [
       "Frontend developer",
@@ -39,10 +40,13 @@ export default function Header() {
     <header className="header">
       {/* Changed id to className */}
       <nav id="nav" className="nav">
-        <span className="dark-mode" aria-label="dark-mode">
-          <span href="">
-            <MdDarkMode />
-          </span>
+        <span
+          className={isDark ? "dark-mode" : "dark-mode dark"}
+          aria-label="dark-mode"
+        >
+          <button onClick={toggleDark} className={isDark ? "" : "dark"}>
+            {isDark ? <MdDarkMode /> : <MdOutlineLightMode />}
+          </button>
         </span>
       </nav>
       <div className="links">
@@ -88,7 +92,7 @@ export default function Header() {
         onClick={() => setIsMenuVisible(!isMenuVisible)}
       >
         <span
-          className="down"
+          className={isDark ? "down" : "down dn-dark"}
           aria-label="down"
           onClick={() => {
             //scroll down the page by 200px
