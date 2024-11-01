@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import { MdDarkMode, MdOutlineMenu } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 import {
   FaGithub,
   FaLinkedin,
-  FaChevronUp,
+  FaAngleDoubleDown,
   FaLaptopCode,
 } from "react-icons/fa";
 
@@ -83,7 +83,16 @@ export default function Header() {
         className="burger-menu"
         onClick={() => setIsMenuVisible(!isMenuVisible)}
       >
-        <MdOutlineMenu />
+        <span
+          className="down"
+          aria-label="down"
+          onClick={() => {
+            //scroll down the page by 200px
+            window.scrollBy(0, 500);
+          }}
+        >
+          <FaAngleDoubleDown />
+        </span>
       </div>
     </header>
   );

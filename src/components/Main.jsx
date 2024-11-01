@@ -4,7 +4,7 @@ export default function Main() {
   return (
     <main className="main" id="home">
       <article className="about-me" id="about">
-        <h2>About Me</h2>
+        <h1>About Me</h1>
         <div className="about-container">
           <span className="left">
             <FaQuoteLeft />
