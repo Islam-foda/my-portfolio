@@ -225,7 +225,7 @@ main {
 
 .main-dark {
   color: var(--dark-color);
-  background-image: none;
+  background-image: none !important;
   background-color: var(--main-bg-color);
 }
 
@@ -478,9 +478,13 @@ main {
 
 /* Start Skills Style */
 .skills {
-  grid-area: skills;
-  padding: 1.5em;
-  border-bottom: 1px solid var(--dark-bg-color);
+    grid-area: skills;
+    padding: 1.5em;
+    border-bottom: 1px solid var(--dark-bg-color);
+    background-image: url(/assets/main-bg.avif);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .skills-dark{
