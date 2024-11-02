@@ -214,7 +214,7 @@ main {
   align-items: center;
   padding: 2rem;
   text-align: center;
-  background-image: url(public/assets/main-bg.avif);
+  background-image: url(/assets/main-bg.avif);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
