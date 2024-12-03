@@ -4,7 +4,7 @@ export const projects = [
     id: 1,
     projectLink: "https://room-homepage-frontend.vercel.app/",
     githubLink: "https://github.com/Islam-foda/room-homepage",
-    img: "./assets/p-5.png",
+    img: "./assets/p-5.jpeg",
     technologies: ["react", "css", "js"],
     description:
       "A Landing page for a furniture showroom.",
@@ -14,7 +14,7 @@ export const projects = [
     id: 2,
     projectLink: "https://landing-page-template-xi-one.vercel.app/",
     githubLink: "https://github.com/Islam-foda/Landing-page_template",
-    img: "./assets/p-6.png",
+    img: "./assets/p-6.jpeg",
     technologies: ["react", "css", "js"],
     description:
       "A Landing page for a Web hosting agency.",
